@@ -1,12 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rampart+One&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: lightgrey;
+}
 
 /* = = = = = H1 = = = = = */
+header {
+  display: inline;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
 h1 {
   font-family: "Rampart One", cursive;
+  color: rgb(122, 116, 216);
+  height: 50px;
+  text-shadow: 5px 5px 5px darkgrey;
+}
+
+/* = = = = = = CALCULATOR BODY = = = = = */
+div.calculator-box {
+  margin: auto;
+  border: 5px double darkgrey;
+  position: relative;
+  top: 40px;
+  width: 500px;
+  height: 800px;
+  display: inherit;
+  box-shadow: 7.5px 7.5px 10px darkgrey, 5px 5px 1px darkgrey inset,
+    -5px -5px 1px darkgrey inset;
+  border-radius: 5px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-content: flex-end;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+div.calculator-box > div.monitor {
+  justify-content: center;
+}
+div.monitor {
+  border: 5px solid rgb(119, 119, 119);
+  height: 100px;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  position: absolute;
+  top: 20px;
+  background: lightgrey;
+}
+div.monitor > p {
+  color: black;
+  font-size: 50px;
+  font-family: "Nunito Sans", sans-serif;
+}
+div._point,
+div._0,
+div._1,
+div._2,
+div._3,
+div._4,
+div._5,
+div._6,
+div._7,
+div._8,
+div._9,
+div._plus,
+div._minus,
+div._equals,
+div._division,
+div._multiplication {
+  border: 1px solid black;
+  position: relative;
+  top: 100px;
+  width: 75px;
+  height: 75px;
+  border-radius: 2px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Nunito Sans", sans-serif;
+  box-shadow: 5px 5px 5px inset darkgrey, -5px -5px 5px inset darkgrey;
+}
+div._point:hover,
+div.C:hover,
+div._0:hover,
+div._1:hover,
+div._2:hover,
+div._3:hover,
+div._4:hover,
+div._5:hover,
+div._6:hover,
+div._7:hover,
+div._8:hover,
+div._9:hover,
+div._plus:hover,
+div._minus:hover,
+div._equals:hover,
+div._division:hover,
+div._multiplication:hover {
+  cursor: pointer;
+}
+div.C {
+  display: flex;
+  position: relative;
+  bottom: 500px;
+  left: 10px;
+  box-shadow: 5px 5px 5px inset darkgrey, -5px -5px 5px inset darkgrey;
+  font-size: 25px;
+  font-family: "Nunito Sans", sans-serif;
+  width: 75px;
+  height: 75px;
+  border-radius: 2px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
 }
