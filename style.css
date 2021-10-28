@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -10,32 +10,31 @@ body {
 }
 
 /* = = = = = H1 = = = = = */
-header {
-  display: inline;
-  height: 50px;
-  position: relative;
-  top: 20px;
-  text-align: center;
-}
 h1 {
-  font-family: "Rampart One", cursive;
-  color: rgb(122, 116, 216);
+  font-family: "Nunito", sans-serif;
+  color: rgb(110, 105, 105);
   height: 50px;
-  text-shadow: 5px 5px 5px darkgrey;
+  font-size: 45px;
+  bottom: 15px;
+  position: relative;
+}
+h1:hover {
+  cursor: default;
 }
 
 /* = = = = = = CALCULATOR BODY = = = = = */
 div.calculator-box {
   margin: auto;
-  border: 5px double darkgrey;
-  position: relative;
-  top: 40px;
+  border: 4px solid rgb(145, 139, 139);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 500px;
   height: 800px;
-  display: inherit;
-  box-shadow: 7.5px 7.5px 10px darkgrey, 5px 5px 1px darkgrey inset,
-    -5px -5px 1px darkgrey inset;
-  border-radius: 5px;
+  box-shadow: 0 0 15px black;
+  border-radius: 20px;
   justify-content: center;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -44,28 +43,26 @@ div.calculator-box {
   column-gap: 20px;
   padding-bottom: 35px;
   padding-top: 35px;
-}
-div.calculator-box > div.monitor {
-  justify-content: center;
+  background: lightgrey;
 }
 div.monitor {
-  border: 5px solid rgb(119, 119, 119);
+  border: 4px solid rgb(145, 139, 139);
   height: 100px;
   display: flex;
-  width: 95%;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  border-radius: 2px;
+  justify-content: right;
+  border-radius: 15px;
   position: absolute;
-  top: 20px;
   background: lightgrey;
 }
 div.monitor > p {
-  color: black;
   font-size: 50px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
-div._point,
+p {
+  color: rgb(87, 82, 82);
+}
 div._0,
 div._1,
 div._2,
@@ -76,25 +73,77 @@ div._6,
 div._7,
 div._8,
 div._9,
+div._point,
 div._plus,
 div._minus,
 div._equals,
 div._division,
 div._multiplication {
-  border: 1px solid black;
+  border: 1px solid rgb(145, 139, 139);
   position: relative;
   top: 100px;
   width: 75px;
   height: 75px;
-  border-radius: 2px;
+  border-radius: 100%;
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  font-family: "Nunito Sans", sans-serif;
-  box-shadow: 5px 5px 5px inset darkgrey, -5px -5px 5px inset darkgrey;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 0 10px rgb(95, 91, 91);
 }
+div._point,
+div._plus,
+div._minus,
+div._equals,
+div._division,
+div._multiplication {
+  background: rgb(187, 184, 184);
+}
+div.C {
+  background: rgb(216, 201, 201);
+}
+div._point:active,
+div._0:active,
+div._1:active,
+div._2:active,
+div._3:active,
+div._4:active,
+div._5:active,
+div._6:active,
+div._7:active,
+div._8:active,
+div._9:active,
+div._plus:active,
+div._minus:active,
+div._equals:active,
+div._division:active,
+div._multiplication:active,
+div.C:active {
+  box-shadow: 0 0 10px rgb(39, 38, 38) inset;
+}
+div._point:active p,
+div._0:active p,
+div._1:active p,
+div._2:active p,
+div._3:active p,
+div._4:active p,
+div._5:active p,
+div._6:active p,
+div._7:active p,
+div._8:active p,
+div._9:active p,
+div._plus:active p,
+div._minus:active p,
+div._equals:active p,
+div._division:active p,
+div._multiplication:active p,
+div.C:active p {
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
 div._point:hover,
 div.C:hover,
 div._0:hover,
@@ -114,18 +163,32 @@ div._division:hover,
 div._multiplication:hover {
   cursor: pointer;
 }
-div.C {
+div.C,
+div.title {
   display: flex;
   position: relative;
   bottom: 500px;
   left: 10px;
-  box-shadow: 5px 5px 5px inset darkgrey, -5px -5px 5px inset darkgrey;
+  box-shadow: 0 0 10px rgb(95, 91, 91);
   font-size: 25px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   width: 75px;
   height: 75px;
   border-radius: 2px;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
+}
+div.C {
+  border-radius: 100%;
+  border-color: rgb(145, 139, 139);
+}
+div.title {
+  position: absolute;
+  width: 300px;
+  left: 150px;
+  bottom: 535px;
+  justify-content: center;
+  box-shadow: 0 0 0 0;
+  border: none;
 }
