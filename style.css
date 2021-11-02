@@ -11,6 +11,7 @@ body {
 
 /* = = = = = H1 = = = = = */
 h1 {
+  user-select: none;
   font-family: "Nunito", sans-serif;
   color: rgb(110, 105, 105);
   height: 50px;
@@ -55,13 +56,10 @@ div.monitor {
   border-radius: 15px;
   position: absolute;
   background: lightgrey;
-}
-div.monitor > p {
+  color: rgb(87, 82, 82);
+  user-select: none;
   font-size: 50px;
   font-family: "Nunito", sans-serif;
-}
-p {
-  color: rgb(87, 82, 82);
 }
 div._0,
 div._1,
@@ -79,6 +77,7 @@ div._minus,
 div._equals,
 div._division,
 div._multiplication {
+  user-select: none;
   border: 1px solid rgb(145, 139, 139);
   position: relative;
   top: 100px;
@@ -103,6 +102,7 @@ div._multiplication {
 }
 div.C {
   background: rgb(216, 201, 201);
+  user-select: none;
 }
 div._point:active,
 div._0:active,
