@@ -58,8 +58,9 @@ div.monitor {
   background: lightgrey;
   color: rgb(87, 82, 82);
   user-select: none;
-  font-size: 50px;
+  font-size: 54px;
   font-family: "Nunito", sans-serif;
+  overflow: hidden;
 }
 div._0,
 div._1,
@@ -100,7 +101,7 @@ div._division,
 div._multiplication {
   background: rgb(187, 184, 184);
 }
-div.C {
+div._C {
   background: rgb(216, 201, 201);
   user-select: none;
 }
@@ -120,7 +121,7 @@ div._minus:active,
 div._equals:active,
 div._division:active,
 div._multiplication:active,
-div.C:active {
+div._C:active {
   box-shadow: 0 0 10px rgb(39, 38, 38) inset;
 }
 div._point:active p,
@@ -139,13 +140,13 @@ div._minus:active p,
 div._equals:active p,
 div._division:active p,
 div._multiplication:active p,
-div.C:active p {
+div._C:active p {
   margin-top: 3px;
   margin-left: 3px;
 }
 
 div._point:hover,
-div.C:hover,
+div._C:hover,
 div._0:hover,
 div._1:hover,
 div._2:hover,
@@ -163,7 +164,7 @@ div._division:hover,
 div._multiplication:hover {
   cursor: pointer;
 }
-div.C,
+div._C,
 div.title {
   display: flex;
   position: relative;
@@ -179,7 +180,7 @@ div.title {
   justify-content: center;
   align-items: center;
 }
-div.C {
+div._C {
   border-radius: 100%;
   border-color: rgb(145, 139, 139);
 }
