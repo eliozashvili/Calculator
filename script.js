@@ -46,9 +46,14 @@ const pushNumbers = function (key) {
             args = [];
             monitorNum.textContent = '0';
         } else if (key === '+') {
-            let arrToNumber = Number(numbers.map((toInt) => parseInt(toInt, 10)).join(''));
+            let arrToNumber = Number(numbers.map(toInt => parseInt(toInt, 10)).join(''));
             args.push(arrToNumber);
             plus(...args);
+            numbers = [];
+        } else if (key === '-') {
+            let arrToNumber = Number(numbers.map(toInt => parseInt(toInt, 10)).join(''));
+            args.push(arrToNumber);
+            minus(...args);
             numbers = [];
         }
     }
@@ -62,9 +67,23 @@ const getTextContext = function (key) {
 
 const plus = function (...args) {
     let sum = 0;
-    for (let i = 0; i < args.length; i++) {
+    for (let i = 0; i < args.length; i++)
         sum += args[i];
-    }
     monitorNum.textContent = sum;
+
     return sum;
 }
+
+const minus = function (...args) {
+    let result = args[0];
+    for (let i = 1; i < args.length; i++)
+        result -= args[i];
+
+    console.log(result);
+    monitorNum.textContent = result;
+
+    return result;
+}
+
+
+/* FIX PLUS AND MINUS BUG */
