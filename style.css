@@ -32,16 +32,16 @@ div.calculator-box {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 500px;
-  height: 800px;
+  width: 430px;
+  height: 650px;
   box-shadow: 0 0 15px black;
   border-radius: 20px;
   justify-content: center;
   display: grid;
   grid-template-columns: auto auto auto auto;
   align-content: flex-end;
-  row-gap: 30px;
-  column-gap: 20px;
+  row-gap: 10px;
+  column-gap: 10px;
   padding-bottom: 35px;
   padding-top: 35px;
   background: lightgrey;
@@ -50,6 +50,7 @@ div.monitor {
   border: 4px solid rgb(145, 139, 139);
   height: 100px;
   display: flex;
+  top: -1px;
   width: 100%;
   align-items: center;
   justify-content: right;
@@ -58,7 +59,7 @@ div.monitor {
   background: lightgrey;
   color: rgb(87, 82, 82);
   user-select: none;
-  font-size: 54px;
+  font-size: 46px;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
 }
@@ -168,7 +169,7 @@ div._C,
 div.title {
   display: flex;
   position: relative;
-  bottom: 500px;
+  bottom: 410px;
   left: 10px;
   box-shadow: 0 0 10px rgb(95, 91, 91);
   font-size: 25px;
@@ -187,8 +188,8 @@ div._C {
 div.title {
   position: absolute;
   width: 300px;
-  left: 150px;
-  bottom: 535px;
+  left: 110px;
+  bottom: 440px;
   justify-content: center;
   box-shadow: 0 0 0 0;
   border: none;

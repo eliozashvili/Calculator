@@ -23,7 +23,7 @@ for (let num of calculatorNumbersClass) {
 // For keydown event
 document.addEventListener('keydown', event => {
     getTextContext(event.key);
-})
+});
 // Checking if symbol is in our allowed list
 const symbol = ['c', 'C', '+', '-', '*', '/', '=', '.', 'Enter', 'Backspace'];
 const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -61,16 +61,13 @@ const calculator = function (key) {
             }
         }
     }
-
+    // If key is equals it calculates result and manipulates with DOM pointerEvents
     if (key === '=' || key === 'Enter') {
         numbers = numbers.replaceAll('=', '').replaceAll('Enter', '');
         result = eval(numbers);
         monitorNum.textContent = result;
-
-        for (let i = 1; i < calculatorNumbersClass.length; i++) {
-            document.querySelector(calculatorNumbersClass[i]).style.pointerEvents = 'none';
-        }
-        // if numbers is more than 15 symbols, first character is substracted
-        numbers.length > 15 && (numbers = numbers.substr(1));
+        numbers = result;
     }
+    // if numbers is more than 15 symbols, first character is substracted
+    numbers.length > 14 && (numbers = numbers.substr(1));
 }
